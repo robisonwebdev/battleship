@@ -5,4 +5,4 @@ const Main = () => {
         <div id='Main'>Main</div>
     );
 }
-Main;
+export default Main;
