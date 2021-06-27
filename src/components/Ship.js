@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Ship = (name, length, hit, sunk) => {
+const Ship = (name, length) => {
+    const hit = (position) => {
+        console.log(`Position ${position} hit!`);
+    }
+    
     return {
         name: name,
         length: length,
@@ -8,5 +12,7 @@ const Ship = (name, length, hit, sunk) => {
         sunk: sunk
     };
 }
+
+
 
 module.exports = Ship;
