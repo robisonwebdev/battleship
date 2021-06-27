@@ -2,7 +2,7 @@ import React from 'react';
 
 const Ship = (name, length) => {
     const shipHull = [];
-    const shipSunk = false;
+    let shipSunk = false;
 
     for (let i = 0; i < length; i++) {
         shipHull[i] = {
@@ -16,11 +16,20 @@ const Ship = (name, length) => {
         }
     }
 
+    const isSunk = () => {
+        let allDamaged = shipHull.every(position => position.damage == true);
+
+        allDamaged ? shipSunk = true : shipSunk = false;
+
+        return shipSunk;
+    }
+
     return {
         name: name,
         length: length,
         hit: hit,
-        hull: shipHull
+        hull: shipHull,
+        sunk: isSunk
     };
 }
 
