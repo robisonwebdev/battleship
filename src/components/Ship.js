@@ -2,6 +2,7 @@ import React from 'react';
 
 const Ship = (name, length) => {
     const shipHull = [];
+    const shipSunk = false;
 
     for (let i = 0; i < length; i++) {
         shipHull[i] = {
