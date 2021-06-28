@@ -11,7 +11,7 @@ const Ship = (name, length) => {
     }
 
     const hit = (position) => {
-        if (position >= 1 && position <= 4) {
+        if (position >= 1 && position <= length) {
             shipHull[position - 1].damage = true;
         }
     }
