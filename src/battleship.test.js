@@ -1,4 +1,13 @@
 const ship = require('./components/Ship');
+const gameboard = require('./components/Gameboard');
+
+
+test('Build gameboard and check object', () => {
+    let gameTest = gameboard();
+    gameTest.build();
+
+    expect(gameTest.gameboard[9][9]).toStrictEqual({"hasShip": false, "position": "J10"});
+})
 
 test('Is the ship sunk?, Yes', () => {
     let patrolBoat = ship('Patrol Boat', 4);
