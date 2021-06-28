@@ -9,7 +9,8 @@ const Gameboard = () => {
     
             for (let j = 0; j < 10; j++) {
                 row[j] = {
-                    position: `${String.fromCharCode(65 + i)}${j + 1}`
+                    position: `${String.fromCharCode(65 + i)}${j + 1}`,
+                    hasShip: false,
                 }
             }
     
